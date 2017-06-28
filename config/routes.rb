@@ -1,4 +1,5 @@
 Lobsters::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope :format => "html" do
     root :to => "home#index",
       :protocol => (Rails.application.config.force_ssl ? "https://" : "http://"),
