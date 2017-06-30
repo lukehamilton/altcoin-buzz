@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :authenticate_user
   before_action :increase_traffic_counter
+  helper_method :current_user
 
   TRAFFIC_DECREMENTER = 0.40
 
@@ -114,4 +115,11 @@ class ApplicationController < ActionController::Base
       @user = User.where(:rss_token => params[:token].to_s).first
     end
   end
+
+  private
+
+  def current_user
+    @current_user ||= User.where(:session_token => session[:u].to_s).first if session[:u]
+  end
+
 end

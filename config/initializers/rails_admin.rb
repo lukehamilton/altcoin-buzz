@@ -1,5 +1,15 @@
 RailsAdmin.config do |config|
 
+  config.parent_controller = "::ApplicationController"
+
+  config.authorize_with do
+    if current_user.nil?
+      redirect_to main_app.root_path
+    else
+      redirect_to main_app.root_path unless current_user.is_admin
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -10,7 +20,6 @@ RailsAdmin.config do |config|
 
   ## == Cancan ==
   # config.authorize_with :cancan
-
   ## == Pundit ==
   # config.authorize_with :pundit
 
