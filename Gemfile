@@ -4,8 +4,8 @@ gem "rails", "~> 5.1"
 
 gem "unicorn"
 
-gem "mysql2", ">= 0.3.14"
-
+# gem "mysql2", ">= 0.3.14"
+gem 'pg'
 gem 'rails_admin', '~> 1.2'
 gem 'pry'
 

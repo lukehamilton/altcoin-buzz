@@ -103,12 +103,12 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
-    mysql2 (0.4.6)
     nested_form (0.3.2)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     oauth (0.5.3)
+    pg (0.21.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -225,9 +225,9 @@ DEPENDENCIES
   jquery-rails (~> 4.3)
   machinist
   mail
-  mysql2 (>= 0.3.14)
   nokogiri (>= 1.7.2)
   oauth
+  pg
   pry
   rails (~> 5.1)
   rails_admin (~> 1.2)

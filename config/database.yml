@@ -1,9 +1,9 @@
-# development:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: newdb
-#   pool: 5
-#   host: localhost
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: luke
+  pool: 5
+  host: localhost
 # development:
 #   adapter: pg
 #   database: newdb
@@ -12,13 +12,13 @@
 #   port: 5432
 #   pool: 50
 #   prepared_statements: false
-development:
-  adapter: mysql2
-  encoding: utf8mb4
-  reconnect: false
-  database: altcoin_buzz_dev
-  socket: /tmp/mysql.sock
-  username: root
+# development:
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   reconnect: false
+#   database: altcoin_buzz_dev
+#   socket: /tmp/mysql.sock
+#   username: root
   # password: *password*
 
 production:
