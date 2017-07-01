@@ -38,9 +38,6 @@ production:
 #   username: root
   # password: *password*
 
-production:
-  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
-
 # test:
 #   adapter: sqlite3
 #   database: db/test.sqlite3
