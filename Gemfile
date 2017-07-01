@@ -4,13 +4,9 @@ gem "rails", "~> 5.1"
 
 gem "unicorn"
 
-# gem "mysql2", ">= 0.3.14"
 gem 'pg'
 gem 'rails_admin', '~> 1.2'
 gem 'pry'
-
-# uncomment to use PostgreSQL
-# gem "pg"
 
 gem "uglifier", ">= 1.3.0"
 gem "jquery-rails", "~> 4.3"

@@ -12,6 +12,8 @@ Lobsters::Application.routes.draw do
 
     get "/page/:page" => "home#index"
 
+    get '/.well-known/acme-challenge/:id' => 'home#letsencrypt'
+
     get "/newest" => "home#newest", :format => /html|json|rss/
     get "/newest/page/:page" => "home#newest"
     get "/newest/:user" => "home#newest_by_user", :format => /html|json|rss/

@@ -4,6 +4,10 @@ class HomeController < ApplicationController
   before_action { @page = page }
   before_action :require_logged_in_user, :only => [ :upvoted ]
 
+  def letsencrypt
+    render plain: 'wu2oVBuPZWw1SGuKpdeKpMVcUsomqsTv07rbEr6ZGbM.Ul1B4ACXWxUyxi9AhKVWsRSL5Gd13i-IuCXtUfB5GFY'
+  end
+
   def four_oh_four
     begin
       @title = "Resource Not Found"

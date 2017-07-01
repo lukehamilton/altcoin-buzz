@@ -21,25 +21,3 @@ production:
   pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
   encoding: unicode
   prepared_statements: false
-# development:
-#   adapter: pg
-#   database: newdb
-#   host: localhost
-#   encoding: unicode
-#   port: 5432
-#   pool: 50
-#   prepared_statements: false
-# development:
-#   adapter: mysql2
-#   encoding: utf8mb4
-#   reconnect: false
-#   database: altcoin_buzz_dev
-#   socket: /tmp/mysql.sock
-#   username: root
-  # password: *password*
-
-# test:
-#   adapter: sqlite3
-#   database: db/test.sqlite3
-#   pool: 5
-#   timeout: 5000
