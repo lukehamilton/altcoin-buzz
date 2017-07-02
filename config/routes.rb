@@ -12,7 +12,7 @@ CryptoBuzz::Application.routes.draw do
 
     get "/page/:page" => "home#index"
 
-    get '/.well-known/acme-challenge/:id' => 'home#letsencrypt'
+    get '/.well-known/acme-challenge/Qus9A6uCkiKo51GoPU65O4SqQBRpuvv7lOYB0TKdI5U' => 'home#letsencrypt'
 
     get "/newest" => "home#newest", :format => /html|json|rss/
     get "/newest/page/:page" => "home#newest"
