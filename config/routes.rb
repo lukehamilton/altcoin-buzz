@@ -1,4 +1,4 @@
-Lobsters::Application.routes.draw do
+CryptoBuzz::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope :format => "html" do
     root :to => "home#index",
