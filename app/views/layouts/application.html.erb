@@ -15,7 +15,8 @@
       <meta name="<%= k %>" content="<%= v %>" />
     <% end %>
   <% end %>
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <!-- <link rel="shortcut icon" href="/favicon.ico" /> -->
+  <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>" />
   <% if @short_url %>
     <link rev="canonical" rel="self alternate shorter shorturl shortlink"
       href="<%= @short_url %>" />
@@ -44,9 +45,15 @@
   <div id="wrapper">
     <div id="header">
       <div id="headerleft">
-        <a id="l_holder" style="background-color: #<%= @traffic_color %>;"
+        <!-- <a id="l_holder" style="background-color: #<%= @traffic_color %>;"
           href="/" title="<%= Rails.application.name %> (Current traffic: <%=
-          @traffic.to_i %>)"></a>
+          @traffic.to_i %>)">
+          <image src='<%= asset_path 'favicon.ico' %>'/>
+        </a> -->
+        <a id="l_holder" href="/" title="<%= Rails.application.name %> (Current traffic: <%=
+          @traffic.to_i %>)">
+          <image src='<%= asset_path 'favicon.ico' %>' width='16px;' height='16px;'/>
+        </a>
 
         <% links = {
           "/" => @cur_url == "/" ? Rails.application.name : "Home",
