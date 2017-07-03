@@ -3,3 +3,5 @@
   <%= word_wrap(@comment.plaintext_comment, :line_width => 72).gsub(/\n/, "\n  ") %>
 
 Continue this discussion at <%= @comment.url %>
+
+<a href="<%= #{Rails.application.root_url}/settings %>">Update email notification settings</a>
