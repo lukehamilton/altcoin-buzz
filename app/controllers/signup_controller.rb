@@ -42,11 +42,16 @@ class SignupController < ApplicationController
     @title = "Signup"
 
     @new_user = User.new(user_params)
-    # @new_user.invited_by_user_id = @invitation.user_id
-    @new_user.invited_by_user_id = '2'
+    if @invitation
+      @new_user.invited_by_user_id = @invitation.user_id
+    else
+      @new_user.invited_by_user_id = nil
+    end
 
     if @new_user.save
-      # @invitation.destroy
+      if @invitation
+        @invitation.destroy
+      end
       session[:u] = @new_user.session_token
       flash[:success] = "Welcome to #{Rails.application.name}, " <<
         "#{@new_user.username}!"

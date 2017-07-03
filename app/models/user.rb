@@ -34,13 +34,13 @@ class User < ActiveRecord::Base
   has_secure_password
 
   typed_store :settings do |s|
-    s.boolean :email_notifications, :default => false
-    s.boolean :email_replies, :default => false
+    s.boolean :email_notifications, :default => true
+    s.boolean :email_replies, :default => true
     s.boolean :pushover_replies, :default => false
     s.string :pushover_user_key
-    s.boolean :email_messages, :default => false
+    s.boolean :email_messages, :default => true
     s.boolean :pushover_messages, :default => false
-    s.boolean :email_mentions, :default => false
+    s.boolean :email_mentions, :default => true
     s.boolean :show_avatars, :default => true
     s.boolean :show_story_previews, :default => false
     s.boolean :show_submitted_story_threads, :default => false
