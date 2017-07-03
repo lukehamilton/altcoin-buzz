@@ -6,7 +6,7 @@ class SignupController < ApplicationController
       flash[:error] = "You are already signed up."
       return redirect_to "/"
     end
-
+    @new_user = User.new
     @title = "Signup"
   end
 
@@ -34,18 +34,19 @@ class SignupController < ApplicationController
   end
 
   def signup
-    if !(@invitation = Invitation.where(:code => params[:invitation_code].to_s).first)
-      flash[:error] = "Invalid or expired invitation."
-      return redirect_to "/signup"
-    end
+    # if !(@invitation = Invitation.where(:code => params[:invitation_code].to_s).first)
+    #   flash[:error] = "Invalid or expired invitation."
+    #   return redirect_to "/signup"
+    # end
 
     @title = "Signup"
 
     @new_user = User.new(user_params)
-    @new_user.invited_by_user_id = @invitation.user_id
+    # @new_user.invited_by_user_id = @invitation.user_id
+    @new_user.invited_by_user_id = '2'
 
     if @new_user.save
-      @invitation.destroy
+      # @invitation.destroy
       session[:u] = @new_user.session_token
       flash[:success] = "Welcome to #{Rails.application.name}, " <<
         "#{@new_user.username}!"
