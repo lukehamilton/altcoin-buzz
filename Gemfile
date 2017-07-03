@@ -8,6 +8,7 @@ gem 'pg'
 gem 'rails_admin', '~> 1.2'
 gem 'pry'
 gem 'sendgrid-ruby'
+gem 'faker'
 
 gem "uglifier", ">= 1.3.0"
 gem "jquery-rails", "~> 4.3"
