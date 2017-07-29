@@ -57,6 +57,8 @@ CryptoBuzz::Application.routes.draw do
     get "/search" => "search#index"
     get "/search/:q" => "search#index"
 
+    get "/tags/suggest" => "home#suggest_tag"
+
     resources :stories do
       post "upvote"
       post "downvote"

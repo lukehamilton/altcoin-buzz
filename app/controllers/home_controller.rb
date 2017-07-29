@@ -56,6 +56,21 @@ class HomeController < ApplicationController
     end
   end
 
+  # https://docs.google.com/forms/d/e/1FAIpQLSdabKkEjRe2UMrZYe5kX3vrTsTYmbN_CeS3ErKLLQWFoyH9Qw/viewform
+
+  def suggest_tag
+    begin
+      @title = "Suggest Tag"
+      render :action => "suggest_tag"
+    rescue ActionView::MissingTemplate
+      # render :html => ("<div class=\"box wide\">" <<
+      #   "<div class=\"legend\">Chat</div>" <<
+      #   "Keep it on-site" <<
+      #   "</div>").html_safe, :layout => "application"
+      render :html => ("<a target=\"_blank\" href=\"https://docs.google.com/forms/d/e/1FAIpQLSdabKkEjRe2UMrZYe5kX3vrTsTYmbN_CeS3ErKLLQWFoyH9Qw/viewform\">Suggest a Tag</a>  ").html_safe, :layout => "application"
+    end
+  end
+
   def privacy
     begin
       @title = "Privacy"
