@@ -167,6 +167,7 @@ CryptoBuzz::Application.routes.draw do
 
     get "/privacy" => "home#privacy"
     get "/about" => "home#about"
+    get "/contact" => "home#contact"
     get "/chat" => "home#chat"
   end
 end

@@ -43,6 +43,19 @@ class HomeController < ApplicationController
     end
   end
 
+  def contact
+    begin
+      @title = "Contact"
+      render :action => "contact"
+    rescue ActionView::MissingTemplate
+      # render :html => ("<div class=\"box wide\">" <<
+      #   "<div class=\"legend\">Chat</div>" <<
+      #   "Keep it on-site" <<
+      #   "</div>").html_safe, :layout => "application"
+      render :html => ("<p>Please send any suggestions, questions, tag requests, etc to:</p><a href=\"lukehamiltonmail@gmail.com\">lukehamiltonmail@gmail.com</a>  ").html_safe, :layout => "application"
+    end
+  end
+
   def privacy
     begin
       @title = "Privacy"
