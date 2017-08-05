@@ -43,6 +43,10 @@ class HomeController < ApplicationController
     end
   end
 
+  def donate
+    @title = "Donate"
+  end
+
   def contact
     begin
       @title = "Contact"

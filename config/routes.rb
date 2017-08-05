@@ -8,6 +8,7 @@ CryptoBuzz::Application.routes.draw do
     get "/404" => "home#four_oh_four", :via => :all
 
     get "/rss" => "home#index", :format => "rss"
+    get '/donate' => "home#donate"
     get "/hottest" => "home#index", :format => "json"
 
     get "/page/:page" => "home#index"
