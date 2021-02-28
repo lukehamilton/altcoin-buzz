@@ -1,5 +1,7 @@
 ### Lobsters Rails Project
 
+Hello!
+
 This is the source code to the site operating at
 [https://lobste.rs](https://lobste.rs).  It is a Rails 4 codebase and uses a
 SQL (MariaDB in production) backend for the database.
